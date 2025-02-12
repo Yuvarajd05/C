@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main() {
+  
+    int n,a,b,sum,prod=1,sq;
+    printf("Enter Number: ");
+    scanf("%d",&n);
+    a=b=n;
+    while(a!=0){
+        int temp;
+        temp=a%10;
+        sum=sum+temp;
+        a=a/10;
+    }
+     while(b!=0){
+        int temp=b%10;
+        prod=prod*temp;
+        b=b/10;
+    }
+    printf("\nSum: %d",sum);
+    printf("\nProduct: %d",prod);
+    if(sum==prod){
+        printf("\nThe number is a Spy number.");
+    }
+    else{
+        printf("\nThe number is not a Spy number.");
+    }
+
+return 0;
+}
